@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="dog"
+            type="com.example.dogapp.model.DogBreed" />
+        <variable
+            name="height"
+            type="com.example.dogapp.model.Height" />
+        <variable
+            name="weight"
+            type="com.example.dogapp.model.Weight" />
+    </data>
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.DetailsFragment">
+
+        <ImageView
+            android:id="@+id/detail_imv"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="25dp" />
+
+        <TextView
+            android:id="@+id/detail_name"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{dog.name}"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp"
+            android:hint="Dog Name"/>
+
+        <TableLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp">
+            <TableRow>
+                <TextView
+                    android:layout_weight="0"
+                    android:text="Bred for"
+                    android:textSize="20dp"/>
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/detail_bred"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:text="@{dog.bred_for}"
+                    android:textSize="20dp"
+                    android:hint="Bred for"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:layout_weight="0"
+                    android:text="Breed group"
+                    android:textSize="20dp"/>
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/detail_group"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:text="@{dog.breed_group}"
+                    android:textSize="20dp"
+                    android:hint="Bred for"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:layout_weight="0"
+                    android:text="Life span"
+                    android:textSize="20dp"/>
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/detail_span"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:text="@{dog.lifeSpan}"
+                    android:textSize="20dp"
+                    android:hint="Bred for"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:layout_weight="0"
+                    android:text="Origin"
+                    android:textSize="20dp"/>
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/detail_origin"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:text="@{dog.origin}"
+                    android:textSize="20dp"
+                    android:hint="Bred for"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:layout_weight="0"
+                    android:text="Temperament"
+                    android:textSize="20dp"/>
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/detail_temperament"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:text="@{dog.temperament}"
+                    android:textSize="20dp"
+                    android:hint="Bred for"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:layout_weight="0"
+                    android:text="Height"
+                    android:textSize="20dp"/>
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/detail_height"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:text="@{height.metric}"
+                    android:textSize="20dp"
+                    android:hint="Height"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:layout_weight="0"
+                    android:text="Weight"
+                    android:textSize="20dp"/>
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/detail_weight"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:text="@{weight.metric}"
+                    android:textSize="20dp"
+                    android:hint="Bred for"/>
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</layout>
